@@ -4,7 +4,7 @@ rg "^\- \[.*\]\(http.*\)" --no-filename --type markdown ~/zettelkasten/ |
   fzf |
   rg -o "http.*\)" |
   sd "\)" "" |
-  xargs -I {} rg --line-number --no-heading --type markdown {} ~/zettelkasten/ |
+  xargs -r -I {} rg --line-number --no-heading --type markdown {} ~/zettelkasten/ | 
   sd ":" " +" |
   sd "\+-.*" "" |
-  xargs nvim
+  xargs -r nvim

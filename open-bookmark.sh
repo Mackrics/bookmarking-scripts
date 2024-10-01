@@ -4,4 +4,4 @@ rg "\\- \\[.*\\]\\(http.*\\)" --no-filename --type markdown ~/zettelkasten |
   fuzzel --dmenu |
   rg -o "http.*\\)" |
   sd "\\)" "" |
-  xargs xdg-open
+  xargs -r xdg-open
